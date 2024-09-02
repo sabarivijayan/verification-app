@@ -97,7 +97,7 @@ const VerifyAadhar: React.FC = () => {
         toast.success("Aadhar verified successfully");
         sessionStorage.removeItem("aadhaarReferenceId");
         setTimeout(() => {
-          router.push("/register/pancard"); // Redirect to PAN card verification page after a delay
+          router.push("/Verification/pancard"); // Redirect to PAN card verification page after a delay
         }, 1200);
       } else {
         toast.error(response.data.data.message || "Invalid OTP, try again"); // Show error message if OTP verification fails

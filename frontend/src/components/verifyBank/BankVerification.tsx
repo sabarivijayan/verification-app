@@ -72,7 +72,7 @@ const BankVerification: React.FC = () => {
                 setIsVerified(true); // Mark as verified
                 toast.success("Bank account verified successfully");
                 setTimeout(() => {
-                    router.push("/pincode"); // Redirect to the next step
+                    router.push("/AddressLookup"); // Redirect to the next step
                 }, 1200);
             } else {
                 toast.error(

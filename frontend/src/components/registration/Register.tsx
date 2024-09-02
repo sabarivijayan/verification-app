@@ -75,7 +75,7 @@ const RegistrationForm: React.FC = () => {
       localStorage.setItem("userId", data.userId);
       setIsVerified(true);
       setTimeout(() => {
-        router.push("/register/mobile");
+        router.push("/Verification/phone");
       }, 1100);
     } catch (error) {
       console.error("Registration failed:", error);
