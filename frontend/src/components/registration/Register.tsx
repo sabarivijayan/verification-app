@@ -2,7 +2,7 @@
 
 import React, { ChangeEvent, FormEvent, useState } from "react"; // Importing necessary hooks and types from React
 import axios from "axios"; // Axios library for making HTTP requests
-import styles from "./Registration.module.css"; // Importing CSS module for styling
+import styles from "./register.module.css"; // Importing CSS module for styling
 import { useRouter } from "next/navigation"; // Router hook for navigating between pages
 import { toast, Toaster } from "react-hot-toast"; // Toast library for displaying notifications
 import ClipLoader from "react-spinners/ClipLoader"; // Spinner component for loading state
@@ -138,6 +138,27 @@ const Registration: React.FC = () => {
           value={formData.phone}
           onChange={handleChange}
           placeholder="Phone"
+          required
+          disabled={isVerified}
+          className={styles.inputField}
+        />
+
+        <input
+          type="text"
+          name="aadhar"
+          value={formData.aadhar}
+          onChange={handleChange}
+          placeholder="Aadhar Number"
+          required
+          disabled={isVerified}
+          className={styles.inputField}
+        />
+        <input
+          type="date"
+          name="dob"
+          value={formData.dob}
+          onChange={handleChange}
+          placeholder="Date of Birth"
           required
           disabled={isVerified}
           className={styles.inputField}
